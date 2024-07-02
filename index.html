@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>太空陽春麵</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 引入外部 CSS 檔案 -->
+</head>
+
+<body>
+    <div class="content">
+        <h1>AI圖像生成</h1>
+        <p>最驚豔的圖像素材生成</p>
+        <input type="text" id="imageDescription" placeholder="填寫想要生成圖像的描述">
+        <button id="generateButton" onclick="generateImage()">生成圖像</button>
+    </div>
+
+    <!-- 選擇圖片素材 -->
+    <div class="animated-container">
+        <!-- 使用 JavaScript 動態顯示圖片 -->
+        <script>
+            // 頁面加載後顯示動畫效果的圖片
+            document.addEventListener('DOMContentLoaded', function() {
+                var images = document.querySelectorAll('.animated');
+                images.forEach(function(image, index) {
+                    image.style.display = 'inline-block';
+                });
+            });
+        </script>
+
+        <!-- 動態加載的圖片 -->
+        <img class="animated" src="pic/simple_noodle1.jpg" alt="Simple Noddle 1">
+        <img class="animated" src="pic/simple_noodle2.jpg" alt="Simple Noddle 2">
+        <img class="animated" src="pic/simple_noodle3.jpg" alt="Simple Noddle 3">
+        <img class="animated" src="pic/simple_noodle4.jpg" alt="Simple Noddle 4">
+        <img class="animated" src="pic/simple_noodle5.jpg" alt="Simple Noddle 5">
+        <img class="animated" src="pic/simple_noodle6.jpg" alt="Simple Noddle 6">
+    </div>
+
+    <script src="script.js"></script> <!-- 引入外部 JavaScript 檔案 -->
+</body>
+
+</html>

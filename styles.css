@@ -1,0 +1,164 @@
+body {
+    background-image: url('pic/outspace.jpg'); /* 背景圖片設置 */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white; /* 文字顏色設置為白色 */
+    text-align: center; /* 文字居中 */
+    margin-top: 15%; /* 頁面上方留出空間 */
+    overflow: hidden; /* 隱藏超出部分 */
+}
+
+.content {
+    margin-top: 50px; /* 內容區塊距離上方的間距 */
+    max-width: 600px; /* 最大寬度設置 */
+    margin-left: auto; /* 左右居中對齊 */
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 2.5em; /* 調整標題字體大小 */
+}
+
+p {
+    font-size: 1.2em; /* 調整段落字體大小 */
+}
+
+input[type="text"] {
+    width: 80%; /* 調整文字輸入框寬度 */
+    height: 40px; /* 調整文字輸入框高度 */
+    font-size: 1em; /* 調整文字輸入框字體大小 */
+    padding: 10px; /* 調整內邊距 */
+    margin-top: 20px; /* 調整上邊距 */
+    margin-bottom: 10px; /* 調整下邊距 */
+    box-sizing: border-box; /* 包括內邊距和邊框在內的盒模型 */
+}
+
+button {
+    width: 150px; /* 調整按鈕寬度 */
+    height: 40px; /* 調整按鈕高度 */
+    font-size: 1em; /* 調整按鈕字體大小 */
+    background-color: #4CAF50; /* 按鈕背景顏色 */
+    color: white; /* 按鈕文字顏色 */
+    border: none; /* 移除按鈕邊框 */
+    cursor: pointer; /* 鼠標懸停顯示指針 */
+    margin-bottom: 20px; /* 調整下邊距 */
+}
+
+button:hover {
+    background-color: #45a049; /* 按鈕懸停時背景顏色 */
+}
+
+.animated-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.animated {
+    width: 200px; /* 圖片寬度固定為200px */
+    height: 150px; /* 圖片高度固定為150px */
+    position: absolute; /* 絕對定位 */
+    display: none; /* 初始隱藏動畫圖片 */
+    animation: slideIn 1s forwards; /* 使用同一個動畫效果 */
+}
+
+@keyframes slideIn {
+    0% {
+        top: -150px;
+        left: -200px;
+    }
+    100% {
+        top: 50px;
+        left: 50px;
+    }
+}
+/* 假設有六張圖片 */
+.animated:nth-child(1) {
+    animation-name: slideInTopLeft1;
+}
+
+.animated:nth-child(2) {
+    animation-name: slideInTopRight1;
+}
+
+.animated:nth-child(3) {
+    animation-name: slideInBottomLeft1;
+}
+
+.animated:nth-child(4) {
+    animation-name: slideInBottomRight1;
+}
+
+.animated:nth-child(5) {
+    animation-name: slideInTopLeft2;
+}
+
+.animated:nth-child(6) {
+    animation-name: slideInTopRight2;
+}
+
+@keyframes slideInTopLeft1 {
+    0% {
+        top: -150px;
+        left: -200px;
+    }
+    100% {
+        top: 50px;
+        left: 50px;
+    }
+}
+
+@keyframes slideInTopRight1 {
+    0% {
+        top: -150px;
+        right: -200px;
+    }
+    100% {
+        top: 50px;
+        right: 50px;
+    }
+}
+
+@keyframes slideInBottomLeft1 {
+    0% {
+        bottom: -150px;
+        left: -200px;
+    }
+    100% {
+        bottom: 50px;
+        left: 50px;
+    }
+}
+
+@keyframes slideInBottomRight1 {
+    0% {
+        bottom: -150px;
+        right: -200px;
+    }
+    100% {
+        bottom: 50px;
+        right: 50px;
+    }
+}
+
+@keyframes slideInTopLeft2 {
+    0% {
+        top: -150px;
+        left: 10%;
+    }
+    100% {
+        top: 150px;
+        left: 10%;
+    }
+}
+
+@keyframes slideInTopRight2 {
+    0% {
+        top: -150px;
+        right: 10%;
+    }
+    100% {
+        top: 150px;
+        right: 10%;
+    }
+}
